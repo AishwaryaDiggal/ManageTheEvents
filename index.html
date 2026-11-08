@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aishwarya Diggal">
+    <title>Admit One | College events, one ticket each</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="masthead">
+        <a href="#top" class="brand" id="homeLink" aria-label="Admit One, home">
+            <span class="brand-mark">Admit<br>One</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span>
+        </button>
+
+        <nav class="nav" id="navLinks" aria-label="Main">
+            <a href="#events" id="exploreLink">All events</a>
+            <a href="#about">About</a>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
+                <span class="theme-dot"></span>
+                <span id="themeLabel">Night</span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="top">
+
+        <section class="next" aria-labelledby="nextName">
+            <p class="next-lead">Next on the college calendar</p>
+
+            <h1 class="next-name" id="nextName">Loading the next event</h1>
+
+            <div class="clock" id="heroClock" role="timer" aria-live="off">
+                <div class="unit"><span class="digits" id="cdDays">00</span><span class="unit-name">days</span></div>
+                <div class="unit"><span class="digits" id="cdHours">00</span><span class="unit-name">hours</span></div>
+                <div class="unit"><span class="digits" id="cdMins">00</span><span class="unit-name">minutes</span></div>
+                <div class="unit"><span class="digits" id="cdSecs">00</span><span class="unit-name">seconds</span></div>
+            </div>
+
+            <div class="next-foot">
+                <p class="next-where" id="nextWhere"></p>
+                <button class="grab" id="nextBtn" type="button">See this event</button>
+                <a class="skip" href="#events">or browse all six</a>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <div class="section-head">
+                <h2>Pick a ticket</h2>
+                <p>Every event on campus this season. Search by name, kind of event or building.</p>
+            </div>
+
+            <label class="search" for="searchInput">
+                <span class="search-label">Find an event</span>
+                <input type="text" id="searchInput" placeholder="hackathon, sports, auditorium" autocomplete="off">
+            </label>
+
+            <div id="eventContainer" class="tickets"></div>
+        </section>
+
+        <section class="event-details-section" id="eventDetails" hidden>
+            <button class="back-btn" id="backToEvents" type="button">Back to all events</button>
+            <div id="eventDetailsContent"></div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>What this is</h2>
+            <p>
+                A small site for students who want to know what is happening on campus
+                without scrolling through ten group chats. Each event gets one ticket
+                with its date, venue, fee and a live countdown. Open a ticket for the
+                full description.
+            </p>
+            <p class="about-credit">
+                Designed and built by <strong>Aishwarya Diggal</strong>,
+                roll no. 24156039, CSE23.
+            </p>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>&copy; <span id="year"></span> Aishwarya Diggal, 24156039, CSE23. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
